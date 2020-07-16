@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>挚蕾首页</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>  
+		<!--注册登录的bootstarp文件-->
+		<!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+		<style>
+			/*头像*/
+			
+			.fakeimg {
+				height: 200px;
+				background: #aaa;
+			}
+			
+			/*在一起多少天*/
+			.title {
+				width: 430px;
+				height: 45px;
+				margin: 200px auto 50px;
+			}
+			
+			.title-item strong {
+				background-color: orange;
+				color: #fff;
+				font-size: 36px;
+				padding: 0 10px;
+				border-radius: 5px;
+				box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+				font-family: Arial, Helvetica, sans-serif;
+				margin-right: 10px;
+				line-height: 49px;
+			}
+			
+			.title-item {
+				width: 430px;
+				height: 45px;
+				margin: 0 auto;
+			}
+			
+			.title-item>span {
+				line-height: 49px;
+				font-size: 32px;
+				color: orange;
+			}
+			/*背景图片*/
+			#bgimage{
+				background:
+                url('img/bg4.jpg');
+                width: 100%;
+                height: 100%;
+			}
+			/*用户头像*/
+			#Userphoto{
+				position: relative;
+				top: 10px;
+			}
+			/*添加*/
+			#tianjiaDiv{
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+			}
+		</style>
+		<script> 
+			//计算时间差
+			function count(){ 
+				var currTime = new Date();//当前时间
+				var startTime = "2018-12-09 21:00:00";//开始时间
+				//将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式
+				startTime = startTime.replace(/\-/g, "/");
+				var sTime = new Date(startTime); 
+				var totalTime = currTime.getTime() - sTime.getTime();
+				var days = parseInt(totalTime/parseInt(1000*60*60*24));
+				totalTime = totalTime%parseInt(1000*60*60*24);
+				var hours = parseInt(totalTime/parseInt(1000*60*60));
+				totalTime = totalTime%parseInt(1000*60*60);
+				var minutes = parseInt(totalTime/parseInt(1000*60));
+				totalTime = totalTime%parseInt(1000*60);
+				var seconds = parseInt(totalTime/parseInt(1000));
+				$('#days').html(days);
+				$('#hours').html(hours);
+				$('#minutes').html(minutes); 
+				$('#seconds').html(seconds); 
+			}
+			setInterval(count,1000);
+			
+			/*添加*/
+			function chanceimages(){
+				$('#tianjia').attr('src','img/tianjiah.png');
+			}
+		 </script>
+	</head> 
+
+	<body>
+
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+					<a class="navbar-brand" href="#">挚蕾</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">我和她</a>
+						</li>
+						<li>
+							<a href="#">页面 2</a>
+						</li>
+						<li>
+							<a href="#">页面 3</a>
+						</li>
+						<li>
+							<a href="#">页面 4</a>
+						</li>
+						<li>
+							<a href="#">页面 5</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container" id="bgimage">
+			<div align="center">
+				<img src="img/slide1.jpg" class="img-circle" style="width: 80px;height: 80px;" align="center" id="Userphoto">
+			</div>
+			<h1 align="center">傻宝宝  &  死猪头</h1>
+			<!--在一起的时间-->
+			<div class="title-item">
+		    <span><span id="days"></span>天</span>
+		    <strong><span id="hours"></span>时</strong>
+		    <strong><span id="minutes"></span>分</strong>
+		    <strong><span id="seconds"></span>秒</strong>
+		</div>
+        <br/>
+		</div> 
+		<div align="center" id='tianjiaDiv'> 
+		<img src="img/tinajiaq.png" id="tianjia" onclick="chanceimages()"/>
+		</div>
+	</body>
+
+</html>
