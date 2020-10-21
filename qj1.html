@@ -13,7 +13,7 @@
 		<link type="text/css" rel="stylesheet" href="./请假_files/index.css">
 		<link type="text/css" rel="stylesheet" href="./请假_files/style.min.css">
 
-		<title>请假</title>
+		<title>请假详情</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -4077,18 +4077,18 @@
 					</div>
 					<!---->
 				</div>
-				<div data-v-158d8008="" data-v-09009c6b="" class="leave-detail" flow-biz="true"><img data-v-158d8008="" src="audit.png" class="audit-pass"> 
+				<div data-v-158d8008="" data-v-09009c6b="" class="leave-detail" flow-biz="true"><img data-v-158d8008="" src="audit.png" class="audit-pass">
 					<div data-v-158d8008="" class="detail__subtitle">请假详情</div>
-					
+
 					<div data-v-158d8008="" class="detail__main">
 						<div data-v-158d8008="" class="detail__main__header"><span data-v-158d8008="" class="detail__main__header__title">我的 请假申请</span></div>
 						<div data-v-158d8008="" class="detail__item">
 							<div data-v-158d8008="" class="detail_item__label">开始时间：</div>
-							<div data-v-158d8008="" class="detail_item__value">10-21 08:00</div>
+							<div data-v-158d8008="" class="detail_item__value"><p id="time1"> 08:00</p></div>
 						</div>
 						<div data-v-158d8008="" class="detail__item">
 							<div data-v-158d8008="" class="detail_item__label">结束时间：</div>
-							<div data-v-158d8008="" class="detail_item__value">10-21 23:00</div>
+							<div data-v-158d8008="" class="detail_item__value"><p id="time2"> 23:00</p></div>
 						</div>
 						<div data-v-158d8008="" class="detail__item">
 							<div data-v-158d8008="" class="detail_item__label">审批流程：</div>
@@ -4106,7 +4106,7 @@
 						</div>
 						<div data-v-158d8008="" class="detail__item" style="margin-bottom: 10px;">
 							<div data-v-158d8008="" class="detail_item__label">请假原因：</div>
-							<div data-v-158d8008="" class="detail_item__value" style="word-break: break-all;">考科目二</div>
+							<div data-v-158d8008="" class="detail_item__value" style="word-break: break-all;" id="reson">考科目二</div>
 						</div>
 						<div data-v-158d8008="" class="detail__item">
 							<div data-v-158d8008="" class="detail_item__label">附件</div>
@@ -4123,7 +4123,7 @@
 							<div data-v-158d8008="" class="detail_item__label">抄送人：</div>
 							<div data-v-158d8008="" class="detail_item__value"><span data-v-158d8008="" href="javascript:void(0)" class="location">无</span></div>
 						</div>
-					</div> 
+					</div>
 					<!---->
 					<div data-v-158d8008="" class="mint-popup mint-popup-right" style="display: none;">
 						<div data-v-2d33f8ac="" data-v-158d8008="" class="full-screen-div need-flow">
@@ -4151,145 +4151,175 @@
 					</div>
 				</div>
 				<!---->
-				<!----> 
+				<!---->
 				<br />
 				<!--下-->
 				<div data-v-158d8008="" class="detail__main">
-						<div data-v-158d8008="" class="detail__main__header"><span data-v-158d8008="" class="detail__main__header__title">审批状态</span></div>
+					<div data-v-158d8008="" class="detail__main__header"><span data-v-158d8008="" class="detail__main__header__title">审批状态</span></div>
 					<!---->
 					<div id="test1">
-					<img src="333.jpg" id="lc"/>	
-					<p id="p1" align="left" style="display: inline;color: darkgray; float:left;">李蕾-发起申请</p>
-					<p id="p11" style="display: inline;color: darkgray; float:left;">10-20&nbsp;14:15</p> 
-					<br /><br />
-					
-					
-					<p id="p2" align="left" style="display: inline;color: darkgray; float:left;">一级：[辅导员]谭胜国-审批<span style="color: green;">通过</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-20&nbsp;14:30</p>
-					<img id="btn_1" src="btn_1.png" style="width: 95%;height: auto;"/>
-					<br /><br /> <br /><br />  
-					
-					<p id="p3" align="left" style="display: inline;color: darkgray; float:left;">二级：[院级管理员]王慧-审批<span style="color: green;">通过</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-20&nbsp;14:50</p>
-					<img id="btn_2" src="btn_1.png" style="width: 95%;height: auto;"/>
-						
-					<br /> 
-					<br />
-					<br />
-					<br />
-					
+						<img src="333.jpg" id="lc" />
+						<p id="p1" align="left" style="display: inline;color: darkgray; float:left;">李蕾-发起申请</p>
+						<p id="p11" style="display: inline;color: darkgray; float:left;">&nbsp;14:15</p>
+						<br /><br />
+
+						<p id="p2" align="left" style="display: inline;color: darkgray; float:left;">一级：[辅导员]谭胜国-审批<span style="color: green;">通过</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="p22"></span>&nbsp;14:30</p>
+						<img id="btn_1" src="btn_1.png" style="width: 95%;height: auto;" />
+						<br /><br /> <br /><br />
+
+						<p id="p3" align="left" style="display: inline;color: darkgray; float:left;">二级：[院级管理员]王慧-审批<span style="color: green;">通过</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="p33"></span>&nbsp;14:50</p>
+						<img id="btn_2" src="btn_1.png" style="width: 95%;height: auto;" />
+
+						<br />
+						<br />
+						<br />
+						<br />
+
 					</div>
-					
-					
+
 				</div>
 				<!---->
-				<!----> 
+				<!---->
 				<!--下-->
-				<img src="22.jpg" style="width: 100%;"/> 
+				<img src="22.jpg" style="width: 100%;" />
 			</div>
-			
+
 		</div>
-		
+
 	</body>
 	<style>
-		#lc{
+		#lc { 
 			position: absolute;
-			top:-4px;
+			top: -4px;
 			left: -50px;
 		}
-		#test1{
+		
+		#test1 {
 			position: relative;
 			left: 22px;
 		}
-		#p1{
+		
+		#p1 {
 			position: absolute;
 			left: 10px;
 		}
-		#p2{
+		
+		#p2 {
 			position: absolute;
 			left: 10px;
 			top: 34px;
 		}
-		#p3{
+		
+		#p3 {
 			position: absolute;
 			left: 10px;
 			top: 120px;
 		}
-		#btn_1{
+		
+		#btn_1 {
 			position: absolute;
 			top: 64px;
 		}
-		#btn_2{
+		
+		#btn_2 {
 			position: absolute;
 			top: 155px;
 		}
-		#p11{
+		
+		#p11 {
 			position: absolute;
-			right: 18px; 
+			right: 11px;
 		}
 	</style>
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script>
-	var myDate = new Date();
-    var year = myDate.getFullYear();//获取年
-    var month = myDate.getMonth() + 1;//获取月，默认从0开始，所以要加一
-    var date = myDate.getDate();//获取日
-    var hours = myDate.getHours();//获取小时
-    var minutes = myDate.getMinutes();//获取分
-    var seconds = myDate.getSeconds();//获取秒
-    var weekend = myDate.getDay(); //获取星期几，这里获得到的是数字1-7，所以我下面自己new了一个数组把获取到的数字当下标
-    var weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
-    var day = weeks[weekend]//这样就是显示的星期x了
-　　//这些if判断是在小于10的时候前面自动补0
-    if (month<10) {
-        month = '0'+month
-    }
-    if (date<10) {
-        date = '0'+date
-    }
-    if (hours<10) {
-        hours = '0'+hours
-    }
-    if (minutes<10) {
-        minutes = '0'+minutes
-    }
-    if (seconds<10) {
-        seconds = '0'+seconds
-    }
-    $('.now-time').append("<span class='year'>"+year+"-"+month+"-"+date+"</span>"+" ")//拼接年月日
-    $('.now-time').append("<span class='hours'>"+hours+":"+minutes+":"+seconds+"</span>"+" ")//拼接时分秒
+		var myDate = new Date();
+		var year = myDate.getFullYear(); //获取年
+		var month = myDate.getMonth() + 1; //获取月，默认从0开始，所以要加一
+		var date = myDate.getDate(); //获取日
+		var hours = myDate.getHours(); //获取小时
+		var minutes = myDate.getMinutes(); //获取分
+		var seconds = myDate.getSeconds(); //获取秒
+		var weekend = myDate.getDay(); //获取星期几，这里获得到的是数字1-7，所以我下面自己new了一个数组把获取到的数字当下标
+		var weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+		var day = weeks[weekend] //这样就是显示的星期x了
+		switch (day) {
+                    case ("星期一"):
+                    jQuery("#reson").text("出校考科目四");
+                        break;
+                    case ("星期二"):
+                    jQuery("#reson").text("要去朋友那拿东西");
+                        break;
+                    case ("星期三"):
+                    jQuery("#reson").text("考科目二，需要离校。"); 
+                        break;
+                    case ("星期四"):
+                    jQuery("#reson").text("考科目一理论，需要出去。");
+                        break;
+                    case ("星期五"):
+                    jQuery("#reson").text("周末放假，想要回家。");
+                        break; 
+                    default:
+                    jQuery("#reson").text("请假回家");
+                    
+                }
+		 //这些if判断是在小于10的时候前面自动补0
+		if(month < 10) {
+			month = '0' + month
+		}
+		if(date < 10) {
+			date = '0' + date
+		}
+		if(hours < 10) {
+			hours = '0' + hours
+		}
+		if(minutes < 10) {
+			minutes = '0' + minutes
+		}
+		if(seconds < 10) {
+			seconds = '0' + seconds
+		}
+		$('.now-time').append("<span class='year'>" + year + "-" + month + "-" + date + "</span>" + " ") //拼接年月日
+		$('.now-time').append("<span class='hours'>" + hours + ":" + minutes + ":" + seconds + "</span>" + " ") //拼接时分秒
+		$('#time1').prepend("<span>" + month + "-" + date + "</span>" + " ") 
+		$('#time2').prepend("<span>" + month + "-" + date + "</span>" + " ")
+		$('#p11').prepend("<span>" + month + "-" + (date-1) + "</span>" + " ")
+		$('#p22').prepend("<span>" + month + "-" + (date-1) + "</span>" + " ")
+		$('#p33').prepend("<span>" + month + "-" + (date-1) + "</span>" + " ")
 	//这里是每隔一秒调用一次改变时分秒的函数*********************************
-　　$(function(){
-        setInterval("changeTime();",1000); //每隔一秒运行一次
-    })
-    function changeTime() { 
-        myDate = new Date();
-        year = myDate.getFullYear();
-        month = myDate.getMonth() + 1;
-        date = myDate.getDate();
-        hours = myDate.getHours();
-        minutes = myDate.getMinutes();
-        seconds = myDate.getSeconds();
-        weekend = myDate.getDay(); 
-        weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
-        day = weeks[weekend]
-        if (month<10) {
-            month = '0'+month
-        }
-        if (date<10) {
-            date = '0'+date
-        }
-        if (hours<10) {
-            hours = '0'+hours
-        }
-        if (minutes<10) {
-            minutes = '0'+minutes
-        }
-        if (seconds<10) {
-            seconds = '0'+seconds
-        }
-　　　　　//这里替换第一次加载的数据
-        $('.year').html(year+"-"+month+"-"+date)
-        $('.hours').html(hours+":"+minutes+":"+seconds) 
-    }    
+		　　 $(function() {
+			setInterval("changeTime();", 1000); //每隔一秒运行一次
+		})
+
+		function changeTime() {
+			myDate = new Date();
+			year = myDate.getFullYear();
+			month = myDate.getMonth() + 1;
+			date = myDate.getDate();
+			hours = myDate.getHours();
+			minutes = myDate.getMinutes();
+			seconds = myDate.getSeconds();
+			weekend = myDate.getDay();
+			weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+			day = weeks[weekend]
+			if(month < 10) {
+				month = '0' + month
+			}
+			if(date < 10) {
+				date = '0' + date
+			}
+			if(hours < 10) {
+				hours = '0' + hours
+			}
+			if(minutes < 10) {
+				minutes = '0' + minutes
+			}
+			if(seconds < 10) {
+				seconds = '0' + seconds
+			}　　　　　 //这里替换第一次加载的数据
+			$('.year').html(year + "-" + month + "-" + date)
+			$('.hours').html(hours + ":" + minutes + ":" + seconds)
+		}
 	</script>
 
 </html>
